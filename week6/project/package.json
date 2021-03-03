@@ -1,0 +1,21 @@
+{
+  "name": "bounty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "npm": "^7.6.0",
+    "uuid.v4": "^1.0.0"
+  },
+  "proxy": "http://localhost:9000"
+}
