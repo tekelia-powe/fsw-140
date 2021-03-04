@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    /* font-family: 'Holtwood One SC', serif; */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+h1{
+    margin: 5px;
+}
+
+p{
+    margin: 5px;
+}
+
+
+.contact{
+    /* border: 1px solid #333; */
+    padding: 10px;
+    margin: 5px;
+}
+form{
+    border: 3px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: #2196F3;
+    
+}
+
+.contact_form{
+    border: 3px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: #2196F3;
+}
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .item-2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }  
+input{
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 5px;
+}
+.img {
+    width: 450px;
+    height: 200px;
+    padding: 20px;
+}
+button{
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.delete-btn{
+    background-color: firebrick;
+    color: whitesmoke;
+}
+
+.edit-btn{
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+.search-btn{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu menu main main main right'
+      'footer footer footer footer footer footer';
+    /* grid-gap: 10px; */
+    /* background-color: #2196F3; */
+    background-image: url('images/contact.jpg');
+    
+    /* padding: 10px; */
+  }
+  .header { grid-area: header; 
+    background-color: black;
+    color: whitesmoke;
+    font-size: 30px;
+   
+  }
+
+
+  .menu { grid-area: menu;
+    /* background-color: #2196F3; */
+        }
+  .main { grid-area: main; }
+  .right { grid-area: right; }
+  .footer { grid-area: footer; 
+    background-color: black;
+    color: whitesmoke;
+    font-size: 15px;
+}
+  
+  .grid-container > div {
+      /* background-color: rgba(255, 255, 255, 0.8); */
+     
+      text-align: center;
+      padding: 20px 0;
+      /* font-size: 30px; */
+    }
