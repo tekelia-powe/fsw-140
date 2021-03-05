@@ -1,15 +1,14 @@
 const express = require("express");
 const app = express();
 const morgan = require('morgan')
-
+const bodyParser = require('body-parser')
 
 app.use(express.json());
 app.use(morgan('dev'))
+// app.use(bodyParser.urlencoded({extended: true}))
 
 
-app.use("/getcontacts", require('./routes/contactRouter.js'))
-
-
+// app.use("/getcontacts", require('./routes/contactRouter.js'))
 
 // Connect to DB
 const mysql = require('mysql');
@@ -18,6 +17,7 @@ host: 'localhost',
 user:'root',
 password:'6276',//password of your mysql db
 database:'contactlist'
+
 })
 
 connection.connect((err) => {
@@ -56,12 +56,38 @@ res.send("contacts table created successfully")
 
 })
 
-//Insert Data into DB
+//Insert Inital Data into DB
 app.get('/insertdata', (req,res) => {
   let post =  {firstName:"Tekelia", lastName:"Terry", age:44, saved:true, phone:"251-753-8478", email: "tekelia@you.com"}
   let sql = "INSERT INTO contacts SET ?";
 
   connection.query(sql, post, (err, result) => {
+if(err){
+  throw err;
+}
+console.log("Data inserted successfully")
+res.send("Data inserted successfully")
+  })
+
+})
+
+//Insert Data into DB from Form
+app.post('/insertcontacts', (req,res) => {
+  
+  const firstName = req.body.firstName
+  const lastName = req.body.lastName
+  const age = req.body.age
+  const saved = 1
+  const phone = req.body.phone
+  const email = req.body.email
+  const em_contact1 = req.body.em_contact1
+  const em_contact2 = req.body.em_contact2
+
+  let sql = "INSERT INTO contacts (firstName, lastName, age,saved, phone, email, em_contact1, em_contact2)  VALUES (?,?,?,?,?,?,?,?)";
+  
+
+
+  connection.query(sql,[firstName, lastName, age,saved, phone, email,em_contact1,em_contact2], (err, result) => {
 if(err){
   throw err;
 }
@@ -80,11 +106,50 @@ app.get('/getcontacts', (req,res) => {
 if(err){
   throw err;
 }
-console.log(result)
-res.send("SELECT command executed successfully")
-  })
+res.send(result)
+})
 
 })
+
+//Delete Data from DB
+app.delete('/delcontact/:contactId', (req,res) => {
+  
+  const id = req.params.contactId;
+  let sql = "DELETE FROM contacts WHERE id=?";
+
+  connection.query(sql, id, (err, result) => {
+if(err){
+  throw err;
+}
+res.send(result)
+})
+
+})
+
+//Edit Data from DB
+app.put('/editcontact/:contactId', (req,res) => {
+  
+  const id = req.params.contactId;
+  const firstName = req.body.firstName
+  const lastName = req.body.lastName
+  const age = req.body.age
+  const saved = 1
+  const phone = req.body.phone
+  const email = req.body.email
+  const em_contact1 = req.body.em_contact1
+  const em_contact2 = req.body.em_contact2
+
+  let sql = "UPDATE contacts SET firstname=?, lastName =?, age=?, saved = ?, phone =?, email =?,em_contact1 =?,em_contact2 =? WHERE id=?";
+
+  connection.query(sql, [firstName, lastName, age,saved, phone, email, em_contact1,em_contact2,id], (err, result) => {
+if(err){
+  throw err;
+}
+res.send(result)
+})
+
+})
+
 
 app.listen(9000, () => {
   console.log("The server is running on Port 9000");
