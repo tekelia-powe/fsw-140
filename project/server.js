@@ -5,10 +5,7 @@ const bodyParser = require('body-parser')
 
 app.use(express.json());
 app.use(morgan('dev'))
-// app.use(bodyParser.urlencoded({extended: true}))
 
-
-// app.use("/getcontacts", require('./routes/contactRouter.js'))
 
 // Connect to DB
 const mysql = require('mysql');
@@ -44,7 +41,7 @@ res.send("contactList database created successfully")
 
 //create a database table
 app.get('/createtable', (req,res) => {
-  let sql = "CREATE TABLE contacts (id INT auto_increment PRIMARY KEY, firstName VARCHAR(100) NOT NULL, lastName VARCHAR(100) NOT NULL, age INT, saved BOOLEAN DEFAULT false, phone VARCHAR(15), email VARCHAR(100))";
+  let sql = "CREATE TABLE contacts (id INT auto_increment PRIMARY KEY, firstName VARCHAR(100) NOT NULL, lastName VARCHAR(100) NOT NULL, age INT, phone VARCHAR(15), email VARCHAR(100),em_contact1 VARCHAR(100),em_contact2 VARCHAR(100))";
 
   connection.query(sql, (err, result) => {
 if(err){
@@ -58,7 +55,7 @@ res.send("contacts table created successfully")
 
 //Insert Inital Data into DB
 app.get('/insertdata', (req,res) => {
-  let post =  {firstName:"Tekelia", lastName:"Terry", age:44, saved:true, phone:"251-753-8478", email: "tekelia@you.com"}
+  let post =  {firstName:"Tekelia", lastName:"Terry", age:44, phone:"251-753-8478", email: "tekelia@you.com"}
   let sql = "INSERT INTO contacts SET ?";
 
   connection.query(sql, post, (err, result) => {
@@ -77,17 +74,16 @@ app.post('/insertcontacts', (req,res) => {
   const firstName = req.body.firstName
   const lastName = req.body.lastName
   const age = req.body.age
-  const saved = 1
   const phone = req.body.phone
   const email = req.body.email
   const em_contact1 = req.body.em_contact1
   const em_contact2 = req.body.em_contact2
 
-  let sql = "INSERT INTO contacts (firstName, lastName, age,saved, phone, email, em_contact1, em_contact2)  VALUES (?,?,?,?,?,?,?,?)";
+  let sql = "INSERT INTO contacts (firstName, lastName, age,phone, email, em_contact1, em_contact2)  VALUES (?,?,?,?,?,?,?)";
   
 
 
-  connection.query(sql,[firstName, lastName, age,saved, phone, email,em_contact1,em_contact2], (err, result) => {
+  connection.query(sql,[firstName, lastName, age,phone, email,em_contact1,em_contact2], (err, result) => {
 if(err){
   throw err;
 }
@@ -133,15 +129,14 @@ app.put('/editcontact/:contactId', (req,res) => {
   const firstName = req.body.firstName
   const lastName = req.body.lastName
   const age = req.body.age
-  const saved = 1
   const phone = req.body.phone
   const email = req.body.email
   const em_contact1 = req.body.em_contact1
   const em_contact2 = req.body.em_contact2
 
-  let sql = "UPDATE contacts SET firstname=?, lastName =?, age=?, saved = ?, phone =?, email =?,em_contact1 =?,em_contact2 =? WHERE id=?";
+  let sql = "UPDATE contacts SET firstname=?, lastName =?, age=?, phone =?, email =?,em_contact1 =?,em_contact2 =? WHERE id=?";
 
-  connection.query(sql, [firstName, lastName, age,saved, phone, email, em_contact1,em_contact2,id], (err, result) => {
+  connection.query(sql, [firstName, lastName, age,phone, email, em_contact1,em_contact2,id], (err, result) => {
 if(err){
   throw err;
 }
