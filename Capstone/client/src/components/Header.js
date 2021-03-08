@@ -7,10 +7,10 @@ import { NavDropdown } from 'react-bootstrap'
 
 function Header() {
     return(
-        <header className="header">
+        <div className="header">
            
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">React Contact List</Navbar.Brand>
+  <Navbar.Brand href="#home"><div className="title">React Phonebook</div></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
@@ -25,7 +25,7 @@ function Header() {
     
   </Navbar.Collapse>
 </Navbar>
-        </header>
+        </div>
 
         
     )

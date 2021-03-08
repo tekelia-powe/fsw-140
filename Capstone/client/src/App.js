@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header.js';
+
 import Home from './pages/Home.js';
 import Main from './pages/Main.js';
 import Search from './pages/Search.js';
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App(props) {
   
     return (
-      <div className="App">
+      <div>
       
         
       {/* <Movies /> */}
@@ -22,7 +22,7 @@ function App(props) {
   
         <Route path="/main">
        
-              <Main/>
+          <Main/>
              
         </Route>
   

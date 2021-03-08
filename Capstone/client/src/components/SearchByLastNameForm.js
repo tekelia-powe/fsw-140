@@ -24,7 +24,7 @@ export default function AddSearchByLastNameForm(props) {
   return (
    <>
          
-<form onSubmit={handleSubmit}>
+<form className="search_form"  onSubmit={handleSubmit}>
 
     Search by Last Name: 
 

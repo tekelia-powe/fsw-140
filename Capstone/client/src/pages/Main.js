@@ -4,7 +4,7 @@ import Contact from '../components/Contact.js'
 import '../App.css'
 import AddContactForm from '../components/AddContactForm.js'
 import Header from '../components/Header.js'
-import Search from '../pages/Search.js'
+
 
 export default function Main(props){
     const [contacts,setContacts] = useState([])
@@ -68,9 +68,7 @@ export default function Main(props){
                     />)
                     
             }</div></div>
-        <div className="right">
-                        
-            </div>
+        
         <div className="footer">FSW-140 Capstone Project: Full Stack Crossover <br></br>2021</div>
         </div>
 
