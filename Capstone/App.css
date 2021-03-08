@@ -1,0 +1,679 @@
+@media only screen and (min-width: 1200px) {
+*{
+    box-sizing: border-box;
+    /* font-family: 'Lato', sans-serif; */
+font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  html { height: 100%; }
+  body { min-height: 100%;
+  background-color: #ddbea8; }
+
+h2{
+    /* margin: 5px; */
+    color: white;
+  }
+
+p{
+    color: white;
+    font-weight: bold;
+  }
+
+.name2{
+    
+    font-weight: bold;
+  }
+
+#link{
+    text-decoration: none;
+  }
+
+.contact{
+    
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    
+  }
+
+form{
+    border: 3px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: #246a73;
+    justify-items: center;
+    
+  }
+
+.name{
+    font-weight: bold;
+  }
+
+  .contact_form{
+    border: 3px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: #246a73;
+    align-items: center;
+    color: white;
+    width: max-content;
+  }
+
+.contact_form input {
+   margin-bottom: 5px;
+   margin-left: 15px;
+   margin-right: 10px;
+   margin-top: 5px;
+    width: 350px;
+  }
+
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+.item-2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }  
+
+input{
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 5px;
+  }
+
+  .img {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+  }
+
+button{
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+    
+  }
+
+button:hover{
+     color: red;
+  }
+
+.delete-btn{
+    background-color: #368f8b;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 250px;
+  }
+
+  .edit-btn{
+    background-color: #368f8b;
+    color: whitesmoke;
+    width: 250px;
+  }
+
+.search-btn{
+    background-color: #368f8b;
+    color: whitesmoke;
+    width: 250px;
+  }
+
+  .main_grid{
+    background-color: #f3dfc1;
+    border-radius: 15px; 
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'menu main'
+      'footer footer';
+    background-color: #ddbea8; 
+    
+  }
+
+.home_grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    background-color: #ddbea8; 
+    width: 100%;
+  height: 100%;
+  }
+
+.header { grid-area: header; 
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    /* font-family: 'Lato', sans-serif; */
+  font-family: 'Patrick Hand', cursive;
+    padding: 25px;
+   
+  }
+  .title{
+    color: whitesmoke;
+    font-size: 45px;
+  }
+.main { grid-area: main; 
+  height: max-content;}
+.footer { grid-area: footer; 
+    background-color: black;
+    color: whitesmoke;
+    font-size: 15px;
+    height: max-content;
+}
+  
+.grid-container > div {
+
+     
+      text-align: center;
+      padding: 25px 0;
+  }
+
+  .home_grid-container > div {
+     
+    text-align: center;
+    padding: 20px 0;
+}
+.list_display{
+        
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+  }
+     
+      
+.search_display{
+        
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+  }
+
+.main_container{
+        display: flex;
+        flex-direction: row;
+        margin: 50px 32px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width:600px) {
+  *{
+      box-sizing: border-box;
+      /* font-family: 'Holtwood One SC', serif; */
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+  
+    html { height: 100%; 
+      background-color: #ddbea8;}
+    body {  
+      background-color: #ddbea8;}
+  
+  h2{
+      /* margin: 5px; */
+      color: white;
+    }
+  
+  p{
+      color: white;
+      font-weight: bold;
+    }
+  
+  .name2{
+      
+      font-weight: bold;
+    }
+  
+  #link{
+      text-decoration: none;
+    }
+  
+  .contact{
+      
+      padding: 10px;
+      margin: 5px;
+      color: white;
+      
+    }
+    .title{
+      color: whitesmoke;
+      font-size: 45px;
+    }
+  form{
+      border: 3px solid #333;
+      padding: 10px;
+      margin: 10px;
+      display: grid;
+      grid-template-columns: auto;
+      vertical-align: middle;
+      border-radius: 10px;
+      background-color: #246a73;
+      justify-items: center;
+      
+    }
+  
+  .name{
+      font-weight: bold;
+    }
+  
+    .contact_form{
+      border: 3px solid #333;
+      padding: 10px;
+      margin: 10px;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      vertical-align: middle;
+      border-radius: 10px;
+      background-color: #246a73;
+      align-items: center;
+      color: white;
+      width: max-content;
+      font-size: smaller;
+    }
+  
+  .contact_form input {
+     margin-bottom: 5px;
+     margin-left: 15px;
+     margin-right: 10px;
+     margin-top: 5px;
+      width: 200px;
+    }
+  
+  .item-1{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+  .item-2{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }  
+  
+  input{
+      padding: 10px;
+      font-size: 10px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      margin: 5px;
+    }
+  
+    .img {
+      width: 350px;
+      height: 300px;
+      padding: 20px;
+    }
+  
+  button{
+      padding: 5px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-right: 5px;
+      margin-left: 5px;
+      
+    }
+  
+  button:hover{
+       color: red;
+    }
+  
+  .delete-btn{
+      background-color: #368f8b;
+      color: whitesmoke;
+      border-radius: 5px;
+      width: 250px;
+    }
+  
+    .edit-btn{
+      background-color: #368f8b;
+      color: whitesmoke;
+      width: 250px;
+    }
+  
+  .search-btn{
+      background-color: #368f8b;
+      color: whitesmoke;
+      width: 150px;
+    }
+  
+    .main_grid{
+      background-color: #f3dfc1;
+      border-radius: 15px; 
+    }
+  
+  .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header'
+        'menu main'
+        'footer footer';
+      background-color: #ddbea8; 
+      
+    }
+  
+  .home_grid-container {
+      display: grid;
+      grid-template-areas:
+        'header'
+        'main'
+        'footer';
+      background-color: #ddbea8; 
+      width: 100%;
+    height: 100%;
+    }
+  
+  .header { grid-area: header; 
+      color: whitesmoke;
+      font-size: x-large;
+      text-align: center;
+      align-items: center;
+     
+      padding: 25px;
+     
+    }
+  .main { grid-area: main; 
+    height: max-content;
+    background-color: #ddbea8;}
+  .footer { grid-area: footer; 
+      background-color: black;
+      color: whitesmoke;
+      font-size: 15px;
+      height: max-content;
+  }
+    
+  .grid-container > div {
+  
+       
+        text-align: center;
+        padding: 25px 0;
+    }
+  
+    .home_grid-container > div {
+       
+      text-align: center;
+      padding: 20px 0;
+  }
+  .list_display{
+          
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+    }
+       
+        
+  .search_display{
+          
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+    }
+  
+  .main_container{
+          display: flex;
+          flex-direction: row;
+          margin: 50px 32px;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          background-color: #ddbea8;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    *{
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+    
+      html { height: 100%; }
+      body { min-height: 100%; 
+        font-family: 'Lato', sans-serif;}
+    
+    h2{
+        /* margin: 5px; */
+        color: white;
+      }
+    
+    p{
+        color: white;
+        font-weight: bold;
+      }
+    
+    .name2{
+        
+        font-weight: bold;
+      }
+    
+    #link{
+        text-decoration: none;
+      }
+    
+    .contact{
+        
+        padding: 10px;
+        margin: 5px;
+        color: white;
+        
+      }
+    
+    form{
+        border: 3px solid #333;
+        padding: 10px;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: auto;
+        vertical-align: middle;
+        border-radius: 10px;
+        background-color: #246a73;
+        justify-items: center;
+        
+      }
+    
+      .search_form input {
+        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-right: 10px;
+        margin-top: 5px;
+         width: 200px;
+       }
+    .name{
+        font-weight: bold;
+      }
+    
+      .contact_form{
+        border: 3px solid #333;
+        padding: 10px;
+        margin: 10px;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        vertical-align: middle;
+        border-radius: 10px;
+        background-color: #246a73;
+        align-items: center;
+        color: white;
+        width: max-content;
+        font-size: smaller;
+      }
+    
+    .contact_form input {
+       margin-bottom: 5px;
+       margin-left: 15px;
+       margin-right: 10px;
+       margin-top: 5px;
+        width: 200px;
+      }
+    
+    .item-1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+    
+    .item-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }  
+    
+    input{
+        padding: 10px;
+        font-size: 10px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin: 5px;
+      }
+    
+      .img {
+        width: 250px;
+        height: 200px;
+        padding: 20px;
+      }
+    
+    button{
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-right: 5px;
+        margin-left: 5px;
+        
+      }
+    
+    button:hover{
+         color: red;
+      }
+    
+    .delete-btn{
+        background-color: #368f8b;
+        color: whitesmoke;
+        border-radius: 5px;
+        width: 250px;
+      }
+    
+      .edit-btn{
+        background-color: #368f8b;
+        color: whitesmoke;
+        width: 250px;
+      }
+    
+    .search-btn{
+        background-color: #368f8b;
+        color: whitesmoke;
+        width: 150px;
+      }
+    
+      .main_grid{
+        background-color: #f3dfc1;
+        border-radius: 15px; 
+      }
+    
+    .grid-container {
+        /* display: grid; */
+        grid-template-areas:
+          'header header'
+          'menu main'
+          'footer footer';
+        background-color: #ddbea8; 
+        
+        
+      }
+    
+    .home_grid-container {
+        /* display: grid; */
+        grid-template-areas:
+          'header'
+          'main'
+          'footer';
+        background-color: #ddbea8; 
+        width: 100vw;
+      height: 100vh;
+      }
+    
+    .header { grid-area: header; 
+        color: whitesmoke;
+        font-size: x-large;
+        text-align: center;
+        align-items: center;
+       
+        padding: 25px;
+       
+      }
+    .main { grid-area: main; 
+      /* height: max-content; */
+      background-color: #ddbea8;
+    }
+      .menu { grid-area: menu; 
+        height: max-content;
+        /* align-items: center;
+        justify-items: center; */
+        padding-left: 30px;
+       padding-right: 30px;
+      margin-left: 60px;
+      margin-right: 60px
+        
+      }
+    .footer { grid-area: footer; 
+        background-color: black;
+        color: whitesmoke;
+        font-size: 15px;
+        height: max-content;
+    }
+      
+    .grid-container > div {
+    
+         
+          text-align: center;
+          padding: 25px 0;
+      }
+    
+      .home_grid-container > div {
+         
+        text-align: center;
+        padding: 20px 0;
+    }
+    .list_display{
+            
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+      }
+         
+          
+    .search_display{
+            
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+      }
+    
+    .main_container{
+            display: flex;
+            flex-direction: column;
+            margin: 50px 32px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+      }
+    }

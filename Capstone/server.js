@@ -81,7 +81,7 @@ app.post('/insertcontacts', (req,res) => {
   const em_contact2 = req.body.em_contact2
   const em_contact2_phone = req.body.em_contact2_phone
 
-  let sql = "INSERT INTO contacts (firstName, lastName,phone, email, em_contact1, em_contact1_phone, em_contact2, em_contact2_phone)  VALUES (?,?,?,?,?,?,?,?,?)";
+  let sql = "INSERT INTO contacts (firstName, lastName,phone, email, em_contact1, em_contact1_phone, em_contact2, em_contact2_phone)  VALUES (?,?,?,?,?,?,?,?)";
   
 
 
